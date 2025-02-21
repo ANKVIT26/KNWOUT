@@ -11,7 +11,6 @@ Forecasting: Get precise 3-day weather forecasts to assist in planning activitie
 
 KNWOUT empowers users with essential information for making informed decisions based on both current and historical weather conditions. Whether planning a trip, organizing outdoor events, or simply staying informed about the weather, KNWOUT offers reliable insights at your fingertips.
 
-![image](https://github.com/user-attachments/assets/794235b7-3f0d-481a-906c-f202c1e0f6fa)
 ![image](https://github.com/user-attachments/assets/4728aa6d-24cf-4ef1-a94f-e5b2babaf751)
 ![image](https://github.com/user-attachments/assets/fea4c8de-7777-4e4d-83e4-4f225ac63a00)
 ![image](https://github.com/user-attachments/assets/e888169e-bae3-4975-b472-336b1fd85382)
