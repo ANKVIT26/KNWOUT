@@ -18,3 +18,6 @@ KNWOUT empowers users with essential information for making informed decisions b
 ![image](https://github.com/user-attachments/assets/7a10d3c2-933c-479d-90f3-510d7c7bec08)
 ![image](https://github.com/user-attachments/assets/03f3e105-3ba7-407f-8502-ef4e2ed937fe)
 
+KNWOUT_DEMO_VIDEO
+--->> https://drive.google.com/file/d/1WhRjrkoCmFiC3UVKoz1A0sDLXqEgm60_/view?usp=sharing
+
