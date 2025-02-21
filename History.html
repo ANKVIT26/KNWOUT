@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            /* Gradient from purple to blue */
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Slightly transparent white for better readability */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        h2 {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #load14DaysData {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s, transform 0.3s;
+            /* Added transform for juggling effect */
+        }
+
+        #load14DaysData:hover {
+            background-color: #4cae4c;
+            /* Change color on hover */
+            transform: translateY(-6px);
+            /* Juggle effect */
+        }
+
+        /* Additional styles for home button */
+        #homeButton {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: .25rem;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            text-align: center;
+            width: auto;
+            font-size: .875rem;
+        }
+
+        #homeButton:hover {
+            transform: translateY(-7px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather History</h1>
+        <h2>Explore History</h2>
+
+        <!-- Cards Container -->
+        <div class="row" id="historyCardsContainer">
+            <!-- Cards will be populated by JavaScript -->
+        </div>
+
+        <!-- Button to trigger loading of historical data -->
+        <div class="text-center mt-4">
+            <button id="load14DaysData" class="btn btn-primary">Show Last 14 Days Data</button>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="forecast.html" class="btn btn-secondary">Get Forecast</a>
+        </div>
+
+        <!-- Home Button -->
+        <div class="text-center mt-4">
+            <button id="homeButton">HOME</button>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add this script to handle the home button click -->
+    <script>
+        document.getElementById('homeButton').addEventListener('click', function () {
+            window.location.href = 'KNWOUT.html'; // Redirect to the main weather app page
+        });
+    </script>
+    <script src="History.js"></script>
+
+</body>
+
+</html>
