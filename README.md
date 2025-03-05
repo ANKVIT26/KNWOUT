@@ -9,12 +9,14 @@ Key Features:
 
 Forecasting: Get precise 3-day weather forecasts to assist in planning activities effectively.
 
-KNWOUT empowers users with essential information for making informed decisions based on both current and historical weather conditions. Whether planning a trip, organizing outdoor events, or simply staying informed about the weather, KNWOUT offers reliable insights at your fingertips.
+KNWOUT empowers users with essential information for making informed decisions based on current and historical weather conditions. Whether planning a trip, organizing outdoor events, or simply staying informed about the weather, KNWOUT offers reliable insights at your fingertips.
 
 ![image](https://github.com/user-attachments/assets/4728aa6d-24cf-4ef1-a94f-e5b2babaf751)
 ![image](https://github.com/user-attachments/assets/fea4c8de-7777-4e4d-83e4-4f225ac63a00)
 ![image](https://github.com/user-attachments/assets/e888169e-bae3-4975-b472-336b1fd85382)
 ![image](https://github.com/user-attachments/assets/b1d08ec6-7fde-4c04-8228-e1bec2a7527e)
+![Screenshot 2025-03-05 100550](https://github.com/user-attachments/assets/c9c0733b-87f8-4973-933f-196c55b7037e)
+
 ![image](https://github.com/user-attachments/assets/7a10d3c2-933c-479d-90f3-510d7c7bec08)
 ![image](https://github.com/user-attachments/assets/03f3e105-3ba7-407f-8502-ef4e2ed937fe)
 
