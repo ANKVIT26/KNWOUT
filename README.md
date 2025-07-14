@@ -1,12 +1,15 @@
 # KNWOUT
-KNWOUT is a powerful weather web app that provides users with global access to comprehensive weather data. Key features include a 14-day historical weather overview and a 3-day forecast, utilizing a reliable Weather API to deliver accurate information.
+KNWOUT delivers comprehensive global weather data through a powerful web interface, featuring 14-day historical tracking and 3-day forecasts via reliable Weather API integration.
 
 Key Features:
 # User Registration and Login: Users can create accounts to save their preferences and access personalized weather data.
-# Global Location Search: Easily search for any location worldwide to retrieve detailed weather statistics.
-# Extensive Weather Data Points: Access approximately 12 different data points per location, including temperature, humidity, wind speed, precipitation, and more.
+# Effortless navigation with visually appealing weather cards that streamline your daily planning. Clean, user-friendly design ensures smooth login and browsing while delivering essential weather insights at a      glance.
+# Global Location Search - Instantly access detailed weather statistics for any location worldwide with our comprehensive search functionality.
+# Extensive Weather Data Points: Access approximately 12 different data points per location, including temperature, humidity, wind speed, precipitation, Sun rise time, Sunset time, and more.
 # Historical Weather Data: Review historical weather information for the past 14 days to identify trends and changes.
 
+# Tech Stack
+HTML, CSS, Node.js, Firebase, OpenWeather API
 Forecasting: Get precise 3-day weather forecasts to assist in planning activities effectively.
 
 KNWOUT empowers users with essential information for making informed decisions based on current and historical weather conditions. Whether planning a trip, organizing outdoor events, or simply staying informed about the weather, KNWOUT offers reliable insights at your fingertips.
