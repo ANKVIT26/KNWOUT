@@ -10,7 +10,8 @@ Key Features:
 
 # Tech Stack
 HTML, CSS, Node.js, Firebase, OpenWeather API
-Forecasting: Get precise 3-day weather forecasts to assist in planning activities effectively.
+
+# Forecasting: Get precise 3-day weather forecasts to assist in planning activities effectively.
 
 KNWOUT empowers users with essential information for making informed decisions based on current and historical weather conditions. Whether planning a trip, organizing outdoor events, or simply staying informed about the weather, KNWOUT offers reliable insights at your fingertips.
 
