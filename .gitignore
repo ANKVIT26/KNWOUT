@@ -1,0 +1,45 @@
+# KNWOUT Weather App - .gitignore
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Local development
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files (if any added later)
+.env
+.env.local
+.env.production
+
+# Build/deployment artifacts
+dist/
+build/
+.netlify/
+.vercel/
+
+# Firebase cache
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Node modules (if npm is added later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python cache (for local server)
+__pycache__/
+*.pyc
+
+# Screenshots/test files (optional)
+screenshots/
+test-output/
