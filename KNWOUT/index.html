@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNWOUT - Landing Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            display: block;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .overlay h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 10px #00FF00;
+        }
+        .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn:hover {
+            background: #45a049;
+            transform: scale(1.1); 
+        }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Welcome to KNWOUT</h1>
+        <div class="button-container">
+            <button class="btn" onclick="location.href='login.html'">Login</button>
+            <button class="btn" onclick="location.href='login.html'">Sign Up</button>
+        </div>
+    </div>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Space background (stars)
+        scene.background = new THREE.Color(0x000000);
+        const starsGeometry = new THREE.BufferGeometry();
+        const starVertices = [];
+        for (let i = 0; i < 6000; i++) {
+            starVertices.push((Math.random() - 0.5) * 2000);
+            starVertices.push((Math.random() - 0.5) * 2000);
+            starVertices.push((Math.random() - 0.5) * 2000);
+        }
+        starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+        const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+        const starField = new THREE.Points(starsGeometry, starsMaterial);
+        scene.add(starField);
+
+        // Earth with day/night texture
+        const textureLoader = new THREE.TextureLoader();
+        const earthTexture = textureLoader.load('https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg');
+        const earthNightTexture = textureLoader.load('https://threejs.org/examples/textures/earth_lights_2048.png');
+        const earthGeometry = new THREE.SphereGeometry(2, 64, 64);
+        const earthMaterial = new THREE.MeshStandardMaterial({
+            map: earthTexture,
+            emissiveMap: earthNightTexture,
+            emissive: 0x222222,
+            emissiveIntensity: 0.8
+        });
+        const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+        scene.add(earth);
+
+        // Lighting
+        const light = new THREE.DirectionalLight(0xffffff, 1.2);
+        light.position.set(5, 3, 5);
+        scene.add(light);
+
+        const ambientLight = new THREE.AmbientLight(0x404040, 1);
+        scene.add(ambientLight);
+
+        camera.position.z = 6;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            earth.rotation.y += 0.002;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+</body>
+</html>

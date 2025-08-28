@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login and Sign-Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Your existing styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 900px;
+      max-width: 95%;
+    }
+    .form-container {
+      flex: 1;
+      padding: 40px;
+    }
+    .image-container {
+      flex: 1;
+      background-image: url('https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg');
+      background-size: cover;
+      background-position: center;
+      min-height: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    .form-group {
+      margin-bottom: 25px;
+    }
+    label {
+      color: #34495e;
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #bdc3c7;
+      border-radius: 6px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="tel"]:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+    .btn-primary {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .btn-primary:hover {
+      background-color: #2980b9;
+    }
+    .error-message {
+      color: #e74c3c;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+    .switch-form {
+      text-align: center;
+      margin-top: 25px;
+      color: #7f8c8d;
+    }
+    .switch-form a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .switch-form a:hover {
+      text-decoration: underline;
+    }
+    .explore-button {
+      margin-top: 25px;
+      text-align: center;
+    }
+    .explore-button .btn-secondary {
+      background-color: #2ecc71;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .explore-button .btn-secondary:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <!-- Login Form -->
+      <div id="loginForm">
+        <h2>Login</h2>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required />
+            <div id="loginEmailError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required />
+            <div id="loginPasswordError" class="error-message"></div>
+          </div>
+          <button type="button" class="btn-primary" onclick="login()">Login</button>
+        </form>
+        <div class="switch-form">
+          Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a>
+        </div>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signupForm" style="display: none;">
+        <h2>Sign Up</h2>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label for="signupName">Name</label>
+            <input type="text" id="signupName" placeholder="Enter your name" required />
+            <div id="nameError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="signupPhone">Phone Number</label>
+            <input type="tel" id="signupPhone" placeholder="Enter your phone number" required />
+            <div id="phoneError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" placeholder="Enter your email" required />
+            <div id="emailError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Enter your password" required />
+            <div id="passwordError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="signupConfirmPassword">Confirm Password</label>
+            <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required />
+            <div id="confirmPasswordError" class="error-message"></div>
+          </div>
+          <button type="button" class="btn-primary" onclick="signup()">Sign Up</button>
+        </form>
+        <div class="switch-form">
+          Already have an account? <a href="#" onclick="showLoginForm()">Login</a>
+        </div>
+      </div>
+
+      <div class="explore-button">
+        <a href="KNWOUT.html" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+    <div class="image-container"></div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      createUserWithEmailAndPassword,
+    } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDwGLqWcnqQ3Lh5jXEc8P3sIQYmKW7a_XQ",
+      authDomain: "weatherapp-199fc.firebaseapp.com",
+      projectId: "weatherapp-199fc",
+      storageBucket: "weatherapp-199fc.appspot.com",
+      messagingSenderId: "916700486208",
+      appId: "1:916700486208:web:150f89656dff4402659da5",
+      measurementId: "G-DDQRR0D803",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    window.login = function () {
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          window.location.assign("KNWOUT.html");
+        })
+        .catch((error) => {
+          alert("Login failed: " + error.message);
+        });
+    };
+
+    window.signup = function () {
+      const email = document.getElementById("signupEmail").value;
+      const password = document.getElementById("signupPassword").value;
+      const confirmPassword = document.getElementById("signupConfirmPassword").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          alert("Sign up successful!");
+        })
+        .catch((error) => {
+          alert("Sign up failed: " + error.message);
+        });
+    };
+
+    function showSignupForm() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("signupForm").style.display = "block";
+    }
+
+    function showLoginForm() {
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("loginForm").style.display = "block";
+    }
+  </script>
+</body>
+</html>
