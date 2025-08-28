@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us -KNWOUT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 2em auto;
+            padding: 2em;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About Us</h1>
+</header>
+
+<div class="container">
+    <h2>Welcome to KNWOUT</h2>
+    <p>Welcome to <strong>KNWOUT</strong> – your one-stop destination for real-time weather statistics and past weather data. At KNWOUT, we believe in empowering you with accurate and up-to-date weather information, right at your fingertips.</p>
+
+    <p>Whether you're planning your day or an important event, KNWOUT ensures you stay prepared with the latest weather conditions. Our platform provides real-time weather stats, including temperature, wind speed, precipitation, and more, to keep you informed.</p>
+
+    <p>But that's not all! We understand that sometimes you need to look back at the weather trends. That's why we offer historical weather data for the past 14 days, so you can analyze patterns, compare conditions, or simply satisfy your curiosity.</p>
+
+    <p>Stay ahead of the weather with KNWOUT – because being prepared makes all the difference.</p>
+
+    <div class="back-link">
+        <a href="KNWOUT.html">Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

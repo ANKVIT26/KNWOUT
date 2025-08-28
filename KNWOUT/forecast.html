@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +20,7 @@
             background-attachment: fixed;
             padding-bottom: 100px;
         }
+
         
         .navbar {
             background-color: rgba(255, 255, 255, 0.1) !important;
@@ -30,36 +32,44 @@
             top: 0;
             z-index: 1000;
         }
+
         .navbar-brand,
         .nav-link {
             color: #fff !important;
         }
+
         .nav-link:hover {
             color: #ddd !important;
         }
+
         .btn-outline-success {
             color: #fff !important;
             border-color: #fff !important;
         }
+
         .btn-outline-success:hover {
             background-color: #fff !important;
             color: #4CAF50 !important;
         }
+
         
         .container {
             padding-top: 100px;
             min-height: calc(100vh - 200px);
             /* Adjust the value to fit your design */
         }
+
         .weather-header {
             text-align: center;
             margin-bottom: 30px;
         }
+
         .weather-header h1 {
             font-size: 2.5rem;
             color: #fff;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
+
         
         .card {
             background-color: rgba(255, 255, 255, 0.1);
@@ -70,10 +80,12 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: #fff;
         }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
+
         .card-header {
             background-color: rgba(255, 255, 255, 0.1);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -81,36 +93,44 @@
             color: #fff;
             border-radius: 15px 15px 0 0;
         }
+
         .card-body {
             padding: 20px;
         }
+
         .card-title {
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 20px;
         }
+
         .list-unstyled li {
             margin-bottom: 10px;
             color: #eee;
             font-size: 1.1rem;
         }
+
         
         .btn-outline-primary {
             color: #fff;
             border-color: #fff;
         }
+
         .btn-outline-primary:hover {
             background-color: #fff;
             color: #4A90E2;
         }
+
         .btn-primary {
             background-color: #4A90E2;
             border-color: #4A90E2;
         }
+
         .btn-primary:hover {
             background-color: #3577B7;
             border-color: #3577B7;
         }
+
         .wave-container {
             position: fixed;
             bottom: 0;
@@ -119,37 +139,53 @@
             height: 100px;
             overflow: hidden;
         }
-        
+
+        .wave {
+            background: url('https://i.imgur.com/6U8n57l.png') repeat-x;
+            position: relative;
+            width: 6400px;
+            height: 100px;
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+        }
+
         .wave:nth-of-type(2) {
             bottom: -12px;
             animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite,
                 swell 7s ease -1.25s infinite;
             opacity: 0.9;
         }
+
         @keyframes wave {
             0% {
                 margin-left: 0;
             }
+
             100% {
                 margin-left: -1600px;
             }
         }
+
         @keyframes swell {
+
             0%,
             100% {
                 transform: translateY(-25px);
             }
+
             50% {
                 transform: translateY(10px);
             }
         }
     </style>
 </head>
+
 <body>
+
     <div class="wave-container">
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
@@ -186,16 +222,20 @@
             </div>
         </div>
     </nav>
+
     <!-- Main Content -->
     <div class="container">
         <div class="weather-header">
             <h1>Weather Forecast for <span id="cityName"></span></h1>
         </div>
+
         <main id="forecastCards">
             <!-- Forecast cards will be dynamically added here -->
         </main>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="forecast.js"></script>
 </body>
+
 </html>
