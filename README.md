@@ -10,7 +10,11 @@ Key Features:
 # Historical Weather Data: Review historical weather information for the past 14 days to identify trends and changes.
 
 # Tech Stack
-HTML, CSS, Node.js, Firebase, OpenWeather API
+HTML/CSS	Structure and styling of the webpage
+Bootstrap	Responsive layout and UI components (cards, grid, spacing)
+Vanilla JS	DOM manipulation, event handling, API calls, and dynamic rendering
+LocalStorage	Stores the last searched city for persistent user experience
+WeatherAPI	External API used to fetch 14-day historical weather data
 
 # Forecasting: Get precise 3-day weather forecasts to assist in planning activities effectively.
 
